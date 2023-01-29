@@ -14,13 +14,11 @@
 
 age = str(input("Введите ваш возраст >"))
 
-first_name=str(input("Введите ваше имя >"))
+first_name = str(input("Введите ваше имя >"))
 
-last_name=str(input("Введите вашу фамилию >"))
+last_name = str(input("Введите вашу фамилию >"))
 
-year=2023
-
-
+year = 2023
 
 print(f"Здравствуйте, {first_name} {last_name},вам {age} лет ")
 
