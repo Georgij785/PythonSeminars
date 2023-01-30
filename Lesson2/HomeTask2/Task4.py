@@ -11,3 +11,12 @@
 Введите целые числа через пробел: 1 2 3
 Результат: 2 1 3
 """
+numbers = input("Введите целые числа через пробел > ")
+lst = numbers.split()
+count = 0
+while count <= (len(lst) - 2):
+    temp = lst[count]
+    lst[count] = lst[count + 1]
+    lst[count + 1] = temp
+    count += 2
+print(lst)
