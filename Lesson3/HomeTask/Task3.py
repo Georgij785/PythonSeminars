@@ -25,3 +25,19 @@
 “ед”: [“шт.”]
 }
 """
+value = int(input("Введите число, сколько разных товаров вы хотите >"))
+my_list = []
+for j in range(1, value + 1):
+    my_list.append((j, {"название": input("Введите название товара > "), "цена": int(input("Введите цену товара > ")),
+                        "количество": int(input("Введите колличество данного товара >")),
+                        "eд": input("Введите единицы измерения >")}))
+
+print(my_list)
+choices = ["название", "цена", "количество", "eд"]
+choices_dict = ["названия", "цены", "количества", "eдиницы"]
+my_dict = {}
+for i in range(0, len(choices)):
+    for item in my_list:
+        x, y = item
+        my_dict[choices_dict[i]] = (y[choices[i]])
+print(my_dict)
