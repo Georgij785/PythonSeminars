@@ -10,4 +10,15 @@
 """
 
 
+def my_sum(n, my_number):
+    a = float(-2)
+    my_number = float(my_number)
+    if n == 0:
+        return 0
+    else:
+        n -= 1
+        my_number /= -2
+        return my_number + my_sum(n, my_number)
 
+
+print(my_sum(int(input("введите число > ")), -2))
