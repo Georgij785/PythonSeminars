@@ -18,3 +18,19 @@
 """
 
 
+def ascii_text(n, result):
+    if n > 127:
+        return
+    else:
+        result.append(f" {n} - {chr(n)}")
+        if n % 10 == 1:
+            print(result)
+            result = []
+        elif n == 127:
+            print(result)
+        n += 1
+        ascii_text(n, result)
+
+
+result = []
+ascii_text(32, result)
