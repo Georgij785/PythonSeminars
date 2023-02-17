@@ -14,4 +14,25 @@
 Введите число: 123
 Количество четных и нечетных цифр в числе равно: (1, 2)
 """
+counts = [0, 0]
 
+
+def count_numbers(n):
+    if len(str(n)) == 1:
+        if n % 2 == 0:
+            counts[0] += 1
+        else:
+            counts[1] += 1
+        n = n // 10
+        return
+    else:
+        if n % 2 == 0:
+            counts[0] += 1
+        else:
+            counts[1] += 1
+        n = n // 10
+    count_numbers(n)
+
+
+count_numbers(int(input("введите число > ")))
+print(f"Количество четных и нечетных цифр в числе равно: {counts}")
