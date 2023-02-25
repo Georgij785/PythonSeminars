@@ -14,3 +14,7 @@
 <class 'bool'>
 <class 'NoneType'>
 """
+lst = ["Hello word", False, None, 23, 9.34]
+
+for item in lst:
+    print(type(item))
