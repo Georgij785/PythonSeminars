@@ -16,4 +16,12 @@
 1230 -> 0321
 """
 
+def reverse(n):
+    if len(str(n)) == 1:
+        return str(n)
+    else:
+        return str(n % 10) + reverse(n // 10)
+
+
+print(reverse(int(input("введите число > "))))
 

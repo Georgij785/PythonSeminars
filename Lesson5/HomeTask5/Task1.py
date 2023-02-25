@@ -23,5 +23,27 @@
 Вы вместо трехзначного числа ввели строку (((. Исправьтесь
 Введите операцию (+, -, *, / или 0 для выхода):
 """
+def calculate(a, b, c):
+    if b == 0:
+        print("на ноль делить нельзя")
+    else:
+        if c == "0":
+            print("конец")
+            return
+        elif c == "+":
+            print(a + b)
+        elif c == "-":
+            print(a - b)
+        elif c == "*":
+            print(a * b)
+        elif c == "/":
+            print(a / b)
+        else:
+            print("некоректное действие")
+        calculate(float(input("введите первое число")), float(input("введите второе число")),
+                  (input("введите действие")))
+
+
+calculate(float(input("введите первое число")), float(input("введите второе число")), (input("введите действие")))
 
 
