@@ -15,3 +15,25 @@
 Набор натуральных чисел можно задать непосредственно в коде,
 например, my_list = [7, 5, 3, 3, 2].
 """
+
+my_list = [7, 5, 3, 3, 2]
+number = int(input("Введите число >"))
+i = 0
+size = len(my_list) - 1
+while i <= size:
+    if number > my_list[i]:
+        my_list.insert(i, number)
+        i += 1
+        break
+    if number == my_list[i]:
+        a = i
+        while my_list[a] == number:
+            a += 1
+        my_list.insert(a, number)
+        break
+    if number < my_list[i]:
+        if i == size:
+            my_list.append(number)
+            break
+        i += 1
+print(my_list)
