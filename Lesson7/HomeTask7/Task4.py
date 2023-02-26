@@ -26,24 +26,30 @@ class Matrix:
     def __init__(self, n, m):
         self.rows = n
         self.columns = m
-        self.matrix = []
+        self.matrix = {}
         for i in range(self.rows):
             row = []
             for j in range(self.columns):
                 row.append(random.randint(-5, 10))
-            self.matrix.append(row)
-            print(row)
+            self.matrix[i]=row
             row.clear()
 
-    def __str__(self):
-        result = ""
-        for n in range(self.rows - 1):
-            rows = ""
-            for m in range(self.columns - 1):
-                rows += str(self.matrix[n][m]) + "  "
-            result += rows + "\n"
-        return result
+    # def __str__(self):
+    #     result = ""
+    #     print(self.columns)
+    #     print(self.rows)
+    #     for n in range(self.rows):
+    #         rows = str()
+    #         for m in range(self.columns):
+    #             print(self.matrix[m][n])
+    #             print(n,m)
+    #             # rows += f"{self.matrix[m][n]} "
+    #         # print(rows)
+    #
+    #         result += rows + "\n"
+    #     return result
 
 
-m = Matrix(2, 3)
-print(m)
+mar = Matrix(3, 3)
+print(mar.matrix[1][0])
+# print(a)
