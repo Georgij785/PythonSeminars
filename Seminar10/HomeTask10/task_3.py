@@ -9,3 +9,12 @@
 --- обязательно!!! усложните задачу, "отловив" исключение,
 придумайте как это сделать
 """
+my_list=["attribute", "класс", "функция", "type"]
+
+try:
+    for i in my_list:
+        u=bytes(i,encoding="utf-8")
+        if "x" in  str(u):
+            raise Exception
+except Exception as err:
+    print("невозможно записать в байтовом типе")
