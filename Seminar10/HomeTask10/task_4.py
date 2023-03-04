@@ -8,3 +8,14 @@
 Подсказки:
 --- используйте списки и циклы, не дублируйте функции
 """
+
+my_list=["разработка", "администрирование", "protocol","standard"]
+b_list=[]
+for i in my_list:
+    a=i.encode()
+    print(a)
+    b_list.append(a)
+print("\n")
+for y in b_list:
+    s=y.decode()
+    print(s)
