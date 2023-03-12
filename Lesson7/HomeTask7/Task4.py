@@ -19,3 +19,37 @@
 Далее реализовать перегрузку метода add() для реализации операции сложения двух объектов класса Matrix (двух матриц). Результатом сложения должна быть новая матрица.
 Подсказка: сложение элементов матриц выполнять поэлементно — первый элемент первой строки первой матрицы складываем с первым элементом первой строки второй матрицы и т.д.
 """
+import random
+
+
+class Matrix:
+    def __init__(self, n, m):
+        self.rows = n
+        self.columns = m
+        self.matrix = {}
+        for i in range(self.rows):
+            row = []
+            for j in range(self.columns):
+                row.append(random.randint(-5, 10))
+            self.matrix[i]=row
+            row.clear()
+
+    # def __str__(self):
+    #     result = ""
+    #     print(self.columns)
+    #     print(self.rows)
+    #     for n in range(self.rows):
+    #         rows = str()
+    #         for m in range(self.columns):
+    #             print(self.matrix[m][n])
+    #             print(n,m)
+    #             # rows += f"{self.matrix[m][n]} "
+    #         # print(rows)
+    #
+    #         result += rows + "\n"
+    #     return result
+
+
+mar = Matrix(3, 3)
+print(mar.matrix[1][0])
+# print(a)
