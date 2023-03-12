@@ -8,3 +8,31 @@
  При вводе пользователем очередного элемента необходимо реализовать проверку типа элемента и вносить его в список, только если введено число.
  Класс-исключение должен не позволить пользователю ввести текст (не число) и отобразить соответствующее сообщение. При этом работа скрипта не должна завершаться.
 """
+class MyError(Exception):
+    def __init__(self, txt):
+        self.txt = txt
+
+
+my_list = []
+
+
+def generate_int_list(my_list):
+    n = input()
+    if n == "stop":
+        return my_list
+    try:
+        try:
+            n = int(n)
+        except:
+            pass
+        if type(n) != int:
+            raise MyError("введено не число")
+    except MyError as err:
+        print(err)
+    else:
+        my_list.append(n)
+    generate_int_list(my_list)
+
+
+generate_int_list(my_list)
+print(my_list)
