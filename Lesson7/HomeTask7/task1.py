@@ -22,14 +22,18 @@ class TrafficLight:
     __colour = "red"
 
     def running(self):
-        self.__colour = "red"
-        time.sleep(7)
-        self.__colour = "yellow"
-        time.sleep(2)
-        self.__colour = "green"
-        time.sleep(9)
+        while True:
+            self.__colour = "red"
+            print("red")
+            time.sleep(7)
+            self.__colour = "yellow"
+            print("yellow")
+            time.sleep(2)
+            self.__colour= "green"
+            print("green")
+            time.sleep(9)
 
 
 trafficlight_1 = TrafficLight()
-while True:
-    trafficlight_1.running()
+
+trafficlight_1.running()
